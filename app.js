@@ -33,11 +33,11 @@ app.get("/", (req,res) =>{
 });
 
 
+
 //connect to db
 //DB_CONNECTION comes from .env file 
-//so we have the link which includes user name and password in .env file 
-// we send our link into .env because of the security of our website
-// throuth .env file the hakers doenst be able to get our informations  
+// In .env file I have my URL which includes user name and password 
+// I hide my URL into .env file because of security matters!
 mongoose.connect(
       process.env.DB_CONNECTION, 
 { useUnifiedTopology: true, useNewUrlParser: true } , ()=>
