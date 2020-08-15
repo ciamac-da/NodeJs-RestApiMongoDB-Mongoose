@@ -1,3 +1,4 @@
+require("dotenv/config");
 //import express
 const express = require("express");
 
@@ -8,7 +9,6 @@ const bodyParser = require("body-parser")
 //to import mongoose
 const mongoose = require("mongoose")
 // to activade env!
-require("dotenv/config");
 const cors = require("cors");
 //Middlewares
 app.use(cors())
@@ -31,7 +31,6 @@ app.use("/posts", postsRoute)
 app.get("/", (req,res) =>{
       res.send("We are on Home");
 });
-
 
 
 //connect to db
